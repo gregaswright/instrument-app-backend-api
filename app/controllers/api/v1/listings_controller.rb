@@ -11,7 +11,19 @@ class Api::V1::ListingsController < ApplicationController
         render json: @listing
     end
 
-    private
+    def create
+        @listing = Listing.new(listing_params)
+        unless @listing.save
+            render json: { status: 500 }
+        else
+            render json: {
+                status: :added,
+                listing: @listing
+            }
+        end
+    end
+
+private
 
   def listing_params
     params.require(:listing).permit(:brand, :instrument_type, :history, :weight, :age, :used, :price, :img, :user_id)
