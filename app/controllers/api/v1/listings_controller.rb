@@ -7,7 +7,7 @@ class Api::V1::ListingsController < ApplicationController
     end
 
     def show
-        @listing = Listing.find(listing_params)
+        @listing = Listing.find(params[:id])
         render json: @listing
     end
 

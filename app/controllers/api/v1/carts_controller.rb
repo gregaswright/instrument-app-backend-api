@@ -7,7 +7,7 @@ class Api::V1::CartsController < ApplicationController
     end
 
     def show
-        @cart = Cart.find(cart_params)
+        @cart = Cart.find(params[:id])
         render json: @cart
     end
 
