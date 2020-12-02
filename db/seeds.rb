@@ -12,6 +12,8 @@ User.create(username: "Bilbo", password: "123", email: "bilbo@gmail.com", wallet
 User.create(username: "Jim", password: "123", email: "bilbo@gmail.com", wallet: 500)
 
 10.times do
-    Listing.create(brand: Faker::Music.band, instrument_type: Faker::Music.instrument, history: "old", weight: 50, age: 50, used: true, price: 50, img: nil, user: User.all.sample)  
+    Listing.create(brand: Faker::Music.band, instrument_type: Faker::Music.instrument, history: "old", weight: 50, age: 50, used: true, price: 50, img: nil, user: User.all.sample, in_cart: false)  
 end
 
+Cart.create(user_id: 1, history: false)
+Cart.create(user_id: 2, history: false)

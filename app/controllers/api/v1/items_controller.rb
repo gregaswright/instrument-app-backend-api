@@ -1,5 +1,4 @@
-class ItemsController < ApplicationController
-
+class Api::V1::ItemsController < ApplicationController
     skip_before_action :authorized
 
     def index
@@ -24,14 +23,10 @@ class ItemsController < ApplicationController
         end
     end
 
-    def destroy
-        Item.destroy(@item.id)
-    end
-    
-
 private
 
   def item_params
     params.require(:item).permit(:cart_id, :listing_id)
   end
+
 end
