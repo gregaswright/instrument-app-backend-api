@@ -26,7 +26,7 @@ class Api::V1::ListingsController < ApplicationController
 private
 
   def listing_params
-    params.require(:listing).permit(:brand, :instrument_type, :history, :weight, :age, :used, :price, :img, :user_id)
+    params.require(:listing).permit(:brand, :instrument_type, :history, :weight, :age, :used, :price, :img, :user_id, :in_cart)
   end
     
     
