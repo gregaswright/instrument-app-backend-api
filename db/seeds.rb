@@ -18,5 +18,11 @@ Listing.create(brand: "Stomvi USA", instrument_type: "Trumpet", history: "Need t
 
 Listing.create(brand: "Ibenez", instrument_type: "Bass Guitar", history: "Bought it for my son, he never plays it so I'm selling it.", weight: 10, age: 2, used: true, price: 60, img: "https://static.turbosquid.com/Preview/2019/12/22__22_20_40/ibanez670_render0000.jpgA76A4B1B-23EC-44DE-9A0C-62DC05F99BB9Large.jpg", user_id: 1, in_cart: false)  
 
+Listing.create(brand: "Geziski", instrument_type: "Violin", history: "Made in post revolution Russia, one of a kind.", weight: 3, age: 200, used: true, price: 6000, img: "https://cdn.britannica.com/27/176327-050-67702AB2/Violin.jpg", user_id: 2, in_cart: false)  
+
+Listing.create(brand: "Dobski", instrument_type: "Flute", history: "Great starter flute, no previous owners.", weight: 1, age: 3, used: false, price: 150, img: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Western_concert_flute_%28Yamaha%29.jpg", user_id: 2, in_cart: false)  
+
+Listing.create(brand: "Unknown", instrument_type: "Acustic Guitar", history: "Not a great guitar, but it works.", weight: 5, age: 1, used: false, price: 20, img: "https://image.made-in-china.com/2f0j00hwOQFAqKyRuc/Solid-Top-D45-Cutaway-Acoustic-Guitar-41-Inches-Acoustic-Electric-Guitar-Dreadnought-Body-Chartin-Electrical-Acoustic-Guitar-Rosewood-Body-Classial-Folk.jpg", user_id: 2, in_cart: false)  
+
 Cart.create(user_id: 1, history: false)
 Cart.create(user_id: 2, history: false)
