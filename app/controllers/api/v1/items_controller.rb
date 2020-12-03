@@ -23,6 +23,24 @@ class Api::V1::ItemsController < ApplicationController
         end
     end
 
+    def update
+        if @item.update(item_params)
+            render json: {
+                status: :updated,
+                item: @item
+            }
+        else
+            render json: { status: 500 }
+        end 
+    end
+
+    def destroy
+        
+        @item = Item.find(params[:id])
+        @item.destroy
+        render json: {}
+    end
+
 private
 
   def item_params

@@ -23,6 +23,25 @@ class Api::V1::ListingsController < ApplicationController
         end
     end
 
+    def update
+        @listing = Listing.find(params[:id])
+        if @listing.update(listing_params)
+            render json: {
+                status: :updated,
+                listing: @listing
+            }
+        else
+            render json: { status: 500 }
+        end 
+    end
+
+    def destroy
+        
+        @listing = Listing.find(params[:id])
+        @listing.destroy
+        render json: {}
+    end
+
 private
 
   def listing_params
